@@ -5,6 +5,9 @@ import FastClick from 'fastclick';
 import Router from '@/router/index.js';
 import App from './App';
 
+import {AjaxPlugin} from 'vux';
+Vue.use(AjaxPlugin);
+
 import 'normalize.css';
 import '@/assets/css/base.css';
 

@@ -3,14 +3,22 @@
 		<h1>{{ msg }}</h1>
 	</div>
 </template>
-
 <script>
+
 export default {
 	name: 'HelloWorld',
 	data() {
 		return {
 			msg: 'HelloWorld'
 		};
+	},
+	components: {
+
+	},
+	mounted() {
+		this.$http.get('/api/t.php').then((response) => {
+				if (cb) cb(response.data)
+			})
 	}
 };
 

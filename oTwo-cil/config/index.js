@@ -46,6 +46,33 @@ module.exports = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false,
+    // dev 端口转发
+    proxyTable: {
+        // '/api': {
+        //     target: 'shengyibao/trunk/dist/api/',
+        //     changeOrigin: true,
+        //     pathRewrite: {
+        //     },
+
+        // },
+
+        // 源:http://192.168.1.25:8092/api/t.php
+        // 实际访问 http://192.168.1.25/shengyibao/trunk/dist/api/t.php
+        '/api': {
+            target: 'http://127.0.0.1/',
+            changeOrigin: true,
+
+            // 将路径中的值替换为
+            pathRewrite: {
+                '^/api': function (a,b,c) {
+                    // 通过函数 自动映射 用以减少 写test/api 的复杂度
+                    console.log(a,b,c); // /api 0 /api/t.php
+                    return 't.php';
+                }
+            },
+
+        }
+    }
   },
 
   build: {
