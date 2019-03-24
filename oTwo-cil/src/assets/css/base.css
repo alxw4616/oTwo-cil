@@ -1,0 +1,26 @@
+html,body {
+	font-family:Arial,Helvetica,sans-serif !important;
+}
+/* ---------------------------------------------------------------
+Clearfix
+--------------------------------------------------------------- */
+
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
