@@ -1,24 +1,29 @@
 <template>
 	<div class="hello">
 		<h1>{{ msg }}</h1>
+		<el-checkbox v-model="checked">备选项</el-checkbox>
 	</div>
 </template>
 <script>
-
+import jquery from "jquery";
+import T from '@/assets/js/tool.js';
 export default {
 	name: 'HelloWorld',
 	data() {
 		return {
-			msg: 'HelloWorld'
+			msg: 'HelloWorld',
+			checked: true
 		};
 	},
 	components: {
-
+		jquery
 	},
 	mounted() {
-		this.$http.get('/api/t.php').then((response) => {
-				if (cb) cb(response.data)
-			})
+		jquery.get().done(function (d) {
+			console.log(d);
+		})
+		console.log(T.DB);
+		console.log(jquery('body'));
 	}
 };
 
