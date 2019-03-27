@@ -9,3 +9,5 @@ externals:{
 'vue': 'Vue',
 'element-ui': 'ElementUI'
 },
+
+igt
