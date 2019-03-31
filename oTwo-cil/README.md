@@ -21,12 +21,89 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 目录说明
-入口文件
-@\src\index.html
-html模板. 设置title. 设置favicon.
-
-@\src\main.js
-加载全局css文件. 加载Router.加载全局组件.
-
-@\src\App.vue
-全局框架. 用户登录逻辑等全局事件
+项目根目录
+│  README.txt 项目说明文档
+│
+├─vue
+│  │  .babelrc
+│  │  .editorconfig
+│  │  .gitignore
+│  │  .postcssrc.js
+│  │  dev.bat		vue本地调试,启动快捷方式
+│  │  build.bat		vue编译,启动快捷方式
+│  │  copy.bat		复制到发布目,启动快捷方式
+│  │  note			项目笔记
+│  │  package.json
+│  │  README.md
+│  │
+│  ├─build			webpack 配置
+│  │      build.js
+│  │      check-versions.js
+│  │      dev-server.js
+│  │      logo.png
+│  │      utils.js
+│  │      vue-loader.conf.js
+│  │      webpack.base.conf.js
+│  │      webpack.dev.conf.js
+│  │      webpack.prod.conf.js
+│  │
+│  ├─config			webpack 配置
+│  │      dev.env.js
+│  │      index.js 	webpack 配置,主要配置开代理解决ajax联调
+│  │      prod.env.js
+│  │
+│  ├─dist			编译后输出目录.需要将其复制到发布目中再上传到服务器
+│  │  │  index.html
+│  │  │
+│  │  └─static
+│  │      ├─css
+│  │      │      app.fdb62ead7a55026f1eb999b7869cf442.css
+│  │      │
+│  │      └─js
+│  │              app.1bcdd9868d30ae610c18.js
+│  │              manifest.37a2ecbb1d1b7e6c9ada.js
+│  │              vendor.43577672a5d50fdb4ed2.js
+│  │
+│  └─src
+│      │  app.vue 		入口文件.页面布局框架
+│      │  index.html 	入口文件.挂载cdn库文件.网站标题,ico等
+│      │  app.js 		入口文件.挂载全局引入
+│      │
+│      ├─assets 		资源
+│      │  ├─css
+│      │  │      base.css
+│      │  │      base.less
+│      │  │
+│      │  ├─img
+│      │  │      cnpm.png
+│      │  │      npm.png
+│      │  │      use-otwo-base.png
+│      │  │
+│      │  └─js 			主要用来放置没有通过npm引入的库文件,这些文件一般不在本项目中维护
+│      │          tool.js
+│      │
+│      ├─components 	公共组件.被其它页面多次引用的组件应放在这里
+│      │      HelloFromVux.vue
+│      │      HelloWorld.vue
+│      │      less.vue
+│      │      npm.vue
+│      │      vw.vue
+│      │
+│      ├─config 		配置.
+│      │      router.js 路由配置.
+│      │      pay-menu.js 消费菜单配置.
+│      │
+│      ├─test 			测试用文档
+│      │  └─api
+│      │          t.json
+│      │          t.php
+│      │
+│      └─views 			页面.应该与路由路径同名.(不在限制必须使用文件夹)
+└─www	发布目录.其内的文件应与服务器部署的文件完全对应
+    │  indxt.html
+    │
+    ├─api
+    └─static
+        ├─css
+        ├─img
+        └─js
