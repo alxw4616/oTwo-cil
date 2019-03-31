@@ -1,7 +1,7 @@
 <template>
 	<div class="hello">
 		<h1>如何在Vue项目中使用vw实现移动端适配</h1>
-
+		<div><a href="https://www.w3cplus.com/mobile/vw-layout-in-vue.html">参考</a></div>
 		<div>cnpm i postcss-aspect-ratio-mini postcss-px-to-viewport postcss-write-svg postcss-cssnext  --S </div>
 		<div>
 			接下来在.postcssrc.js文件对新安装的PostCSS插件进行配置：
