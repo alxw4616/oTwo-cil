@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import vw from '@/components/vw'
-import less from '@/components/less'
-import npm from '@/components/npm'
+import HelloWorld from '@/views/HelloWorld'
+import vw from '@/views/vw'
+import less from '@/views/less'
+import npm from '@/views/npm'
 Vue.use(VueRouter);
 export default new VueRouter({
 	routes: [{

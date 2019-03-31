@@ -3,8 +3,8 @@
 
 
 // import Vue from 'vue';
-import Router from '@/router/index.js';
-import App from './App';
+import router from '@/config/router.js';
+import app from './app.vue';
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI);
 // import 'normalize.css';
@@ -14,6 +14,6 @@ import App from './App';
 
 /* eslint-disable no-new */
 new Vue({
-  router:Router,
-  render: h => h(App)
+  router:router,
+  render: h => h(app)
 }).$mount('#app-box');

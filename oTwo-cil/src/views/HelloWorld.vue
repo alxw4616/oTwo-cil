@@ -19,11 +19,11 @@ export default {
 		jquery
 	},
 	mounted() {
-		jquery.get().done(function (d) {
+		jquery.getJSON('api/t.json').done(function (d) {
 			console.log(d);
+		}).fail(function(jqXHR, textStatus, errorThrown) {
+			console.log(jqXHR, textStatus, errorThrown);
 		})
-		console.log(T.DB);
-		console.log(jquery('body'));
 	}
 };
 
