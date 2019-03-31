@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import hh from '@/components/hh'
+import vw from '@/components/vw'
 
 Vue.use(VueRouter)
 
@@ -13,9 +13,9 @@ export default new VueRouter({
       component: HelloWorld
     },
     {
-      path: '/hh',
-      name: 'hh',
-      component: hh
+      path: '/vw',
+      name: 'vw',
+      component: vw
     }
   ]
 })
