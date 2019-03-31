@@ -7,8 +7,8 @@ import Router from '@/router/index.js';
 import App from './App';
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI);
-import 'normalize.css';
-import '@/assets/css/base.css';
+// import 'normalize.css';
+// import '@/assets/css/base.css';
 
 
 

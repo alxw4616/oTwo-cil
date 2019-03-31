@@ -35,23 +35,12 @@ export default {
 
 <!-- 这里用来写私有的css -->
 <style lang="less" scoped>
-h1,
+@import '../assets/css/base.less';
 h2 {
 	font-weight: normal;
+	color: @c;
+	.border-radius(4px);
 }
 
-ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-a {
-	color: #42b983;
-}
 
 </style>
