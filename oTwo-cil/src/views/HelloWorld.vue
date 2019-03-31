@@ -19,11 +19,23 @@ export default {
 		jquery
 	},
 	mounted() {
-		jquery.getJSON('api/t.json').done(function (d) {
-			console.log(d);
-		}).fail(function(jqXHR, textStatus, errorThrown) {
-			console.log(jqXHR, textStatus, errorThrown);
-		})
+	 	let ss = T.formatDate(new Date(),'Y年M月D日 hh:mm:ss');
+	 	console.log(ss);
+
+ 	 	ss = T.countdown(10,1000).done(function (i) {
+ 			console.log(i);
+ 			if (i < 5) {
+ 				this.stop();
+ 			};
+ 		});
+
+ 		ss = T.toThousands(10000);
+ 		console.log(ss);
+		// jquery.getJSON('api/t.json').done(function (d) {
+		// 	console.log(d);
+		// }).fail(function(jqXHR, textStatus, errorThrown) {
+		// 	console.log(jqXHR, textStatus, errorThrown);
+		// })
 	}
 };
 
