@@ -6,7 +6,12 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
+    // 本地调试时 网站的根目录
+    // 默认值 require('path').resolve(__dirname,'../src/test/')
+    // 增加该参数后 可以访问 src/test/ 下的文件
+    // 如 http://localhost:8080/api/t.json => src/test/api/t.json
+    // 但注意 proxyTable ,proxyTable的优先级更高
+    contentBase:"",
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -15,7 +20,7 @@ module.exports = {
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-

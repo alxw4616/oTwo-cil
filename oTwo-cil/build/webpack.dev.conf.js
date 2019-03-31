@@ -7,7 +7,7 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-
+console.log(require('path').resolve(__dirname,'test'));
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -17,6 +17,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
+    // 本地调试时 网站的根目录
+    contentBase:require('path').resolve(__dirname,'../src/test/') || config.dev.contentBase,
     clientLogLevel: 'warning',
     historyApiFallback: true,
     hot: true,
