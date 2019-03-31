@@ -1,0 +1,30 @@
+/*
+	less编译研究
+	// 结论:
+	1.base.ess 中直接写的类会被编译到最终文件里.如 .w1;
+		多个文件引用.则注入多次.
+	2.定义的变量, 带参数的混合类, 混合类不会.
+		其只会参与编译
+*/
+// 定义变量
+@c : red;
+
+// 带参数的混合类
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  &:hover {
+    border: 1px solid red;
+  }
+}
+
+// 混合类
+#d1(){
+	padding: 10px;
+	margin: 10px;
+}
+.w1{
+	width: 10%;
+}
+
