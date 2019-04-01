@@ -4,7 +4,7 @@
 			<el-col :span="12">
 				<h5>导航</h5>
 				<el-menu default-active="0" :router="true">
-					<el-menu-item :index="item.path" v-for="(item,idx) in page" >
+					<el-menu-item :index="item.path" v-for="(item,idx) in page" :key="idx">
 						<i class="el-icon-menu"></i>{{item.name}}
 					</el-menu-item>
 				</el-menu>

@@ -1,15 +1,22 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HelloWorld from '@/views/HelloWorld'
-import vw from '@/views/vw'
-import less from '@/views/less'
-import npm from '@/views/npm'
+// 路由懒加载
+// const Foo = () => import('./Foo.vue')
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+
+const HelloWorld = () => import( '@/views/HelloWorld');
+const list = () => import( '@/components/list.vue');
+const vw = () => import( '@/views/vw');
+const less = () => import( '@/views/less');
+const npm = () => import( '@/views/npm');
+
+
+
 export default new VueRouter({
 	routes: [{
 		path: '/',
-		name: 'HelloWorld',
-		component: HelloWorld
+		name: 'list',
+		component: list
 	}, {
 		path: '/vw',
 		name: 'vw',
