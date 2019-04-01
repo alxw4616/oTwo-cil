@@ -81,11 +81,12 @@ export default {
 		jquery
 	},
 	mounted() {
-		jquery.get().done(function(d) {
-			console.log(d);
-		});
-		console.log(T.DB);
-		console.log(jquery('body'));
+		console.log(this.$root.user = 'qwe');
+		// jquery.get().done(function(d) {
+		// 	console.log(d);
+		// });
+		// console.log(T.DB);
+		// console.log(jquery('body'));
 	}
 };
 

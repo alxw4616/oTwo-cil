@@ -26,6 +26,8 @@ export default {
 		// this.$router.options.routes; app路由对象的所有配置信息
 		var ss = this.$router.options.routes;
 		this.page = ss;
+
+		console.log(this.$root.user);
 	}
 };
 </script>

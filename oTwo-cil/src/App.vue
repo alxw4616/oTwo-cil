@@ -6,7 +6,14 @@
 
 <script>
 export default {
-	name: 'app'
+	name: 'app',
+	data(){
+		return {
+		}
+	},
+	mounted(){
+		console.log(this.$root.user);
+	}
 };
 
 </script>
