@@ -5,7 +5,7 @@
 // import Vue from 'vue';
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI);
-// import 'normalize.css';
+import 'normalize.css';
 // import '@/assets/css/base.css';
 
 import router from '@/config/router.js';

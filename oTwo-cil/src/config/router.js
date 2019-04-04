@@ -9,6 +9,8 @@ const list = () => import( '@/components/list.vue');
 const vw = () => import( '@/views/vw');
 const less = () => import( '@/views/less');
 const npm = () => import( '@/views/npm');
+const calenda = () => import( '@/views/calenda');
+
 
 
 
@@ -29,5 +31,9 @@ export default new VueRouter({
 		path: '/npm',
 		name: 'npm',
 		component: npm
+	}, {
+		path: '/calenda',
+		name: 'calenda',
+		component: calenda
 	}]
 })
