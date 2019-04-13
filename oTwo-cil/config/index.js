@@ -6,6 +6,7 @@ const path = require('path')
 
 module.exports = {
   dev: {
+    env: require('./dev.env'),
     // 本地调试时 网站的根目录
     // 默认值 require('path').resolve(__dirname,'../src/test/')
     // 增加该参数后 可以访问 src/test/ 下的文件

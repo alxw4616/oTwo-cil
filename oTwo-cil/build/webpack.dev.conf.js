@@ -1,3 +1,5 @@
+// 相关文档说明
+// https://webpack.docschina.org/configuration/dev-server/#devserver-open
 'use strict'
 const utils = require('./utils')
 const webpack = require('webpack')
@@ -23,7 +25,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     historyApiFallback: true,
     hot: true,
     compress: true,
-    host: process.env.HOST || config.dev.host,
+    disableHostCheck: true,
+    useLocalIp: true,
+    host: '0.0.0.0',
     port: process.env.PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay ? {
