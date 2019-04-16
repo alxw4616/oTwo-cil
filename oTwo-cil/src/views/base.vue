@@ -1,9 +1,14 @@
+/**
+* vue 的基础模板
+* 包含 vue 常用的 属性/方法
+*/
 <template>
 	<div class="hello">
 		<h1>{{ msg }}</h1>
 	</div>
 </template>
 <script>
+	// import Lib from 'assets/js/Lib';
 	export default {
 		// 组件
 		components: {},
