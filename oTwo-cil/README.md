@@ -1,6 +1,8 @@
 # otwocil
 
-> A Vue.js project
+> vue 开发 脚手架模板.
+> 分支 	mobile 	移动开发
+> 分支	pc		pc开发
 
 ## Build Setup
 
@@ -40,7 +42,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 │  │      build.js
 │  │      check-versions.js
 │  │      dev-server.js
-│  │      logo.png
 │  │      utils.js
 │  │      vue-loader.conf.js
 │  │      webpack.base.conf.js
@@ -53,19 +54,9 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 │  │      prod.env.js
 │  │
 │  ├─dist			编译后输出目录.需要将其复制到发布目中再上传到服务器
-│  │  │  index.html
-│  │  │
-│  │  └─static
-│  │      ├─css
-│  │      │      app.fdb62ead7a55026f1eb999b7869cf442.css
-│  │      │
-│  │      └─js
-│  │              app.1bcdd9868d30ae610c18.js
-│  │              manifest.37a2ecbb1d1b7e6c9ada.js
-│  │              vendor.43577672a5d50fdb4ed2.js
 │  │
 │  └─src
-│      │  app.vue 		入口文件.页面布局框架
+│      │  App.vue 		入口文件.页面布局框架
 │      │  index.html 	入口文件.挂载cdn库文件.网站标题,ico等
 │      │  app.js 		入口文件.挂载全局引入
 │      │

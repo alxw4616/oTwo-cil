@@ -1,7 +1,7 @@
 {
   "name": "otwocil",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "vue 开发脚手架-模板.",
   "author": "alxw4616@msn.com",
   "private": true,
   "scripts": {
