@@ -12,7 +12,7 @@ export default {
 		}
 	},
 	mounted(){
-		console.log(this.$root.user);
+		// console.log(this.$root.user);
 	}
 };
 
