@@ -12,7 +12,7 @@ module.exports = {
     // 增加该参数后 可以访问 src/test/ 下的文件
     // 如 http://localhost:8080/api/t.json => src/test/api/t.json
     // 但注意 proxyTable ,proxyTable的优先级更高
-    contentBase:"",
+    contentBase:require('path').resolve(__dirname,'../src/test/'),
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -64,20 +64,20 @@ module.exports = {
 
         // 源:http://192.168.1.25:8092/api/t.php
         // 实际访问 http://192.168.1.25/shengyibao/trunk/dist/api/t.php
-        '/api': {
-            target: 'http://127.0.0.1/',
-            changeOrigin: true,
+        // '/api': {
+        //     target: 'http://127.0.0.1/',
+        //     changeOrigin: true,
 
-            // 将路径中的值替换为
-            pathRewrite: {
-                '^/api': function (a,b,c) {
-                    // 通过函数 自动映射 用以减少 写test/api 的复杂度
-                    console.log(a,b,c); // /api 0 /api/t.php
-                    return 't.php';
-                }
-            },
+        //     // 将路径中的值替换为
+        //     pathRewrite: {
+        //         // '^/api': function (a,b,c) {
+        //         //     // 通过函数 自动映射 用以减少 写test/api 的复杂度
+        //         //     console.log(a,b,c); // /api 0 /api/t.php
+        //         //     return 't.php';
+        //         // }
+        //     },
 
-        }
+        // }
     }
   },
 
