@@ -3,7 +3,7 @@ import 'normalize.css';
 
 import router from '@/config/router.js';
 import App from './App.vue';
-import User from '@/components/user.js';
+import User from '@/assets/js/user.js';
 import FastClick from 'fastclick';
 
 FastClick.attach(document.body);
