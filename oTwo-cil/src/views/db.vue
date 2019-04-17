@@ -43,44 +43,61 @@
 			},
 		},
 		methods: {
-			get() {
+			get(){
 				this.db.request().then((d) => {
-					console.log('click', d);
-				}).catch((e) => {});
+					console.log('click',d);
+				}).catch((e) => {
+					if (e == '错误已处理') {
+						// 全局处理,这里不要单独做了.
+						return;
+					}
+
+					console.log(e);
+				});
 				this.db.request().then((d) => {
-					console.log('click', d);
-				}).catch((e) => {});
+					console.log('click',d);
+				}).catch((e) => {
+					if (e == '错误已处理') {
+						// 全局处理,这里不要单独做了.
+						return;
+					}
+
+					console.log(e);
+				});
 			}
 		},
 		mounted() {
+			console.log(this.jquery);
+			this.jquery.ajax('api/t.json');
 			// 通过DB建立的ajax 请求.有以下特性
 			// 统一的错误处理 使用.catch 处理结果
 			// 唯一性请求. 上次请求未完成时.再次请求. 上次请求会被放弃.使用.catch 处理结果
-			this.db = new DB({
-				url: 'api/t.json',
-				params: {
-					c: 1
-				},
-				// method: 'post',
-				// data: {
-				// 	firstName: 'Fred',
-				// 	lastName: 'Flintstone'
-				// }
-			});
-			this.db.request({
-				params: {
-					c: 2,
-					d: 1
-				}
-			}).then((d) => {
-				console.log('d1', d);
-			}).catch((e) => {
-				if (e == '错误已处理') {
-					// 全局处理,这里不要单独做了.
-					return;
-				}
-				console.log(e.response);
-			});
+			// this.db = new DB({
+			// 	url: 'api/t.json',
+			// 	params: {
+			// 		c: 1
+			// 	},
+			// 	// method: 'post',
+			// 	// data: {
+			// 	// 	firstName: 'Fred',
+			// 	// 	lastName: 'Flintstone'
+			// 	// }
+			// });
+			// this.db.request({
+			// 	params: {
+			// 		c: 2,
+			// 		d: 1
+			// 	}
+			// }).then((d) => {
+			// 	console.log('d1', d);
+			// }).catch((e) => {
+			// 	if (e == '错误已处理') {
+			// 		// 全局处理,这里不要单独做了.
+			// 		return;
+			// 	}
+
+			// 	console.log(e.response);
+			// });
 		}
 		// beforeDestroy(){}
 		// destroyed(){}

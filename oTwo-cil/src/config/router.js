@@ -6,7 +6,9 @@ Vue.use(VueRouter);
 const views = {
 	list: () => import('@/views/list.vue'),
 	HelloWorld: () => import('@/views/HelloWorld'),
-	db: () => import('@/views/db.vue')
+	db: () => import('@/views/db.vue'),
+	npm: () => import('@/views/npm.vue'),
+	flex: () => import('@/views/flex.vue'),
 };
 const routes = [{
 	path: '/',
