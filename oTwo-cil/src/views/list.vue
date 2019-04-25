@@ -1,7 +1,9 @@
 <template>
 	<div class="wrap">
 		<h2>导航</h2>
-		<router-link class="list"
+		<div flex=rowl>flex</div>
+		<router-link
+					class="list"
 		             tag="div"
 		             v-for="(item,idx) in page"
 		             :to="item.path"
@@ -24,6 +26,8 @@
 			// this.$router.options.routes; app路由对象的所有配置信息
 			this.page = this.$router.options.routes;
 			// console.log(this.$root.user);
+			console.log(this.page);
+			console.log(...this.page);
 		}
 	};
 

@@ -9,6 +9,7 @@ const views = {
 	db: () => import('@/views/db.vue'),
 	npm: () => import('@/views/npm.vue'),
 	flex: () => import('@/views/flex.vue'),
+	user: () => import('@/views/user.vue'),
 };
 const routes = [{
 	path: '/',

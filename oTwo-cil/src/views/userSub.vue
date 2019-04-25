@@ -1,18 +1,23 @@
+/**
+* vue 的基础模板
+* 包含 vue 常用的 属性/方法
+*/
 <template>
 	<div class="hello">
-		<h1>{{ msg }}</h1>
+		<h1>子组件</h1>
 		<h1>user:{{ $root.user.user}}</h1>
-
+		user:<input type="text" v-model="$root.user.user">
 	</div>
 </template>
 <script>
+	// import Lib from 'assets/js/Lib';
 	export default {
 		// 组件
 		components: {},
 		data() {
 			return {
 				msg: 'HelloWorld',
-				checked: true
+				checked: true,
 			};
 		},
 		// 计算属性
@@ -37,7 +42,10 @@
 			},
 		},
 		methods: {},
-		mounted() {}
+		mounted() {
+			var ss = this.$root.user;
+			console.log(ss);
+		}
 		// beforeDestroy(){}
 		// destroyed(){}
 	};
