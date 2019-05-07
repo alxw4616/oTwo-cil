@@ -15,6 +15,24 @@ export default {
 	components: {
 	},
 	mounted() {
+		// var ss = this.$db();
+		// console.log(ss.get);
+		// ss.get('../../api/user_status.php', {
+		// 	params: {
+		// 		"action": "select",
+		// 	}
+		// }).then((d) => {
+		// 	this.user = d.data;
+		// 	// 测试用数据
+		// 	// this.user = {
+		// 	// 	"bind": "0",
+		// 	// 	"roam": "1",
+		// 	// 	"subscribe": "0",
+		// 	// 	"card": "1",
+		// 	// 	"online": "1"
+		// 	// };
+		// 	this.changeUser(this.user);
+		// }).catch((e) => {});
 	}
 };
 
