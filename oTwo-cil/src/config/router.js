@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 const views = {
 	list: () => import('@/views/list.vue'),
 	HelloWorld: () => import('@/views/HelloWorld'),
+	qr: () => import('@/views/qr'),
 };
 const routes = [{
 	path: '/',
