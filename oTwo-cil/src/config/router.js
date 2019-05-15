@@ -3,19 +3,39 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+
+var children1 = () => import('@/views/childrenRoute.vue')
+var children2 = () => import('@/views/childrenRoute2.vue')
+var children3 = () => import('@/views/childrenRoute3.vue')
+
 const views = {
 	list: () => import('@/views/list.vue'),
 	HelloWorld: () => import('@/views/HelloWorld'),
-	db: () => import('@/views/db.vue'),
-	npm: () => import('@/views/npm.vue'),
-	flex: () => import('@/views/flex.vue'),
-	user: () => import('@/views/user.vue'),
 };
+
 const routes = [{
 	path: '/',
 	name: 'index',
 	component: views.list
 }];
+
+routes.push({
+	path:'/children1',
+	name:"childrenRoute",
+	component:children1,
+	children:[
+		{
+			path:'children2',
+			name:"children2",
+			component:children2,
+		},
+		{
+			path:'children3',
+			name:"children3",
+			component:children3,
+		},
+	]
+})
 for (let f1 in views) {
 	routes.push({
 		path: '/' + f1,

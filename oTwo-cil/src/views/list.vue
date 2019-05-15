@@ -10,13 +10,26 @@
 		             :key="idx">
 			{{item.name}}
 		</router-link>
+		<hr>
+		<router-link
+					class="list"
+		             tag="div"
+		             v-for="(item,idx) in testpage"
+		             :to="item.path"
+		             :key="idx">
+			{{item.name}}
+		</router-link>
 	</div>
 </template>
 <script>
 	export default {
 		data() {
 			return {
-				page: []
+				page: [],
+				testpage:[{
+					name:"路由嵌套",
+					path:"/children1/children2"
+				}]
 			};
 		},
 		components: {},
