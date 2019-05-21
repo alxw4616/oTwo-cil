@@ -18,8 +18,8 @@ let webpackConfig = {
   // 如果我们想引用一个库，但是又不想让webpack打包，并且又不影响我们在程序中以CMD、AMD或者window/global全局等方式进行使用，那就可以通过配
   // 前一个key是引用第三方的库名,后一个value是你在项目中起的别名
   externals:{
-    'vue': 'Vue',
-    'element-ui': 'ElementUI'
+    // 'vue': 'Vue',
+    // 'element-ui': 'ElementUI'
   },
   output: {
     path: config.build.assetsRoot,

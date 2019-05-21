@@ -1,15 +1,12 @@
 <template>
-	<div>
-		<el-row class="tac">
-			<el-col :span="12">
-				<h5>导航</h5>
-				<el-menu default-active="0" :router="true">
-					<el-menu-item :index="item.path" v-for="(item,idx) in page" :key="idx">
-						<i class="el-icon-menu"></i>{{item.name}}
-					</el-menu-item>
-				</el-menu>
-			</el-col>
-		</el-row>
+	<div class="w">
+		<router-link class="link"
+		    tag="div"
+		    v-for="(item,idx) in page"
+		    :key="idx"
+		    :to="item.path">
+		    {{item.name}}
+		</router-link>
 	</div>
 </template>
 <script>
@@ -29,12 +26,21 @@ export default {
 		// console.log(this.$root.user);
 	}
 };
-</script>
 
+</script>
 <!-- 用来污染公共css -->
 <style lang="less">
 </style>
-
 <!-- 这里用来写私有的css -->
-<style lang="less" scoped>
+<style lang="less"
+    scoped>
+.w {
+	padding: 30px;
+}
+
+.link {
+	border-bottom: 1px solid #000;
+	line-height: 60px;
+}
+
 </style>
