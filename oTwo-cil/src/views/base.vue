@@ -40,9 +40,9 @@
 			},
 		},
 		methods: {},
-		mounted() {}
-		// beforeDestroy(){}
-		// destroyed(){}
+		mounted() {},
+		// beforeDestroy(){},
+		// destroyed(){},
 	};
 
 </script>
@@ -54,8 +54,7 @@
 <!-- 这里用来写私有的css -->
 <style lang="less"
        scoped>
-	@import '../assets/css/base.less';
-	@import '~otwo-base/otwo-base.less';
+	@import '~@/assets/css/base.less';
 
 	h2 {
 		font-weight: normal;

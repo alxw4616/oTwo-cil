@@ -1,0 +1,489 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<template>\n  <div>\n    <slot name=\"h\"></slot>\n    <slot name=\"b\"></slot>\n    <slot name=\"f\"></slot>\n  </div>\n</template>\n<script>\nexport default {\n  data() {\n    return {};\n  }\n  , components: {}\n  , mounted() {}\n};\n\n</script>\n<!-- 用来污染公共css -->\n<style lang=\"less\"></style>\n<!-- 这里用来写私有的css -->\n<style lang=\"less\" scoped>\n</style>\n",
+			"file": "/D/cil/oTwo-cil/oTwo-cil/src/components/EsFlex.vue",
+			"file_size": 382,
+			"file_write_time": 132405493497998443,
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "/**\n* vue 的基础模板\n* 包含 vue 常用的 属性/方法\n*/\n<template>\n\t<div class=\"hello\">\n\t\t<h1>{{ msg }}</h1>\n\t</div>\n</template>\n<script>\n// import Lib from 'assets/js/Lib';\nexport default {\n\t// 组件\n\tcomponents: {},\n\tdata() {\n\t\treturn {\n\t\t\tmsg: 'HelloWorld',\n\t\t\tchecked: true,\n\t\t\ta: [{\n\t\t\t\tb: c\n\t\t\t}, 3, 4, 5, 6]\n\t\t};\n\t}, // 计算属性\n\tcomputed: {\n\t\ttotal: {\n\t\t\tget() {},\n\t\t\tset(val) {}\n\t\t}\n\t},\n\t// 侦听属性\n\twatch: {},\n\tfilters: {\n\t\t// 显示 带*号的身份证号码\n\t\tshowCert(val) {\n\t\t\tif (!val) {\n\t\t\t\treturn;\n\t\t\t}\n\t\t\tlet left = val.slice(0, 6);\n\t\t\tlet right = val.slice(-4);\n\t\t\tconsole.log(left, right);\n\t\t\treturn left + '*'.repeat(6) + right;\n\t\t},\n\t},\n\tmethods: {},\n\tmounted() {}\n\t// beforeDestroy(){}\n\t// destroyed(){}\n};\n\n</script>\n<!-- 用来污染公共css -->\n<style lang=\"less\">\n</style>\n<!-- 这里用来写私有的css -->\n<style lang=\"less\" scoped>\n@import '../assets/css/base.less';\n@import '~otwo-base/otwo-base.less';\n\nh2 {\n\tfont-weight: normal;\n\tcolor: @c;\n\t.border-radius(4px);\n}\n\n</style>\n",
+			"file": "base.vue",
+			"file_size": 1113,
+			"file_write_time": 132405493498018382,
+			"settings":
+			{
+				"buffer_size": 935,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": " var myChart = echarts.init(document.getElementById('main'));\n var option = {\n    title: {\n        text: 'ECharts 入门示例'\n    },\n    tooltip: {},\n    legend: {\n        data: ['销量']\n    },\n    xAxis: {\n        data: [\"衬衫\", \"羊毛衫\", \"雪纺衫\", \"裤子\", \"高跟鞋\", \"袜子\"]\n    },\n    yAxis: {},\n    series: [{\n        name: '销量',\n        type: 'bar',\n        data: [5, 20, 36, 10, 10, 20]\n    }]\n };\n myChart.setOption(option);\n",
+			"settings":
+			{
+				"buffer_size": 408,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "{\n    // The plugin looks for a .jsbeautifyrc file in the same directory as the\n    // source file you're prettifying (or any directory above if it doesn't exist,\n    // or in your home folder if everything else fails) and uses those options\n    // along the default ones.\n\n    // Details: https://github.com/victorporof/Sublime-HTMLPrettify#using-your-own-jsbeautifyrc-options\n    // Documentation: https://github.com/beautify-web/js-beautify\n\n    \"all\":\n    {\n        // These rules apply to any supported code that is going to be be prettified,\n        // and have the lowest level of precedence (meaning any of the settings in\n        // the 'html', 'css', 'js', 'json' and 'custom' categories override these).\n\n        // You can add other .jsbeautifyrc rules in this section too.\n\n        // End output with newline\n        \"end_with_newline\": true,\n\n        // Character(s) to use as line terminators.\n        \"eol\": \"\\n\",\n\n        // Initial indentation level\n        \"indent_level\": 0,\n\n        // Indentation character\n        \"indent_char\": \" \",\n\n        // Indentation size\n        \"indent_size\": 4,\n\n        // Indent with tabs, overrides `indent_size` and `indent_char`\n        \"indent_with_tabs\": false,\n\n        // Maximum number of line breaks to be preserved in one chunk (0 disables)\n        \"max_preserve_newlines\": 0,\n\n        // Whether existing line breaks before elements should be preserved (only works before elements, not inside tags or for text)\n        \"preserve_newlines\": true,\n\n        // Lines should wrap at next opportunity after this number of characters (0 disables)\n        \"wrap_line_length\": 0,\n        a: [{a:123}, 2, 3, 4, 5, 6]\n    },\n\n    \"html\":\n    {\n        // Rules added here apply only to HTML-like files, as determined by the\n        // rules specified for `global_file_rules` in the plugin settings. They\n        // take precedence  over all of the settings in the 'all' category above.\n\n        // You can add other .jsbeautifyrc rules in this section too.\n\n        // e.g. {{#foo}}, {{/foo}}\n        \"indent_handlebars\": false,\n\n        // Indent <head> and <body> sections\n        \"indent_inner_html\": false,\n\n        // [keep|separate|normal]\n        \"indent_scripts\": \"keep\",\n\n        // List of tags that should not be reformatted.  This should generally not be needed.\n        \"unformatted\": [],\n    },\n\n    \"css\":\n    {\n        // Rules added here apply only to CSS-like files, as determined by the\n        // rules specified for `global_file_rules` in the plugin settings. They\n        // take precedence  over all of the settings in the 'all' category above.\n\n        // You can add other .jsbeautifyrc rules in this section too.\n\n        // Add a new line after every css rule\n        \"newline_between_rules\": true,\n\n        // Selector separator character\n        \"selector_separator\": \" \",\n\n        // Separate selectors with newline or not (e.g. \"a,\\nbr\" or \"a, br\")\n        \"selector_separator_newline\": true\n    },\n\n    \"js\":\n    {\n        // Rules added here apply only to JS-like files, as determined by the\n        // rules specified for `global_file_rules` in the plugin settings. They\n        // take precedence  over all of the settings in the 'all' category above.\n\n        // You can add other .jsbeautifyrc rules in this section too.\n\n        // [collapse|collapse-preserve-inline|expand|end-expand|none] Put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or put end braces on own line, or attempt to keep them where they are\n        \"brace_style\": \"collapse-preserve-inline\",\n\n        // Break chained method calls across subsequent lines\n        \"break_chained_methods\": false,\n\n        // Put commas at the beginning of new line instead of end\n        \"comma_first\": false,\n\n        // Pass E4X xml literals through untouched\n        \"e4x\": true,\n\n        // If true, then jslint-stricter mode is enforced\n        \"jslint_happy\": false,\n\n        // Preserve array indentation\n        \"keep_array_indentation\": false,\n\n        // Preserve function indentation\n        \"keep_function_indentation\": false,\n\n        // [before-newline|after-newline|preserve-newline] Set operator position\n        \"operator_position\": \"before-newline\",\n\n        // Should the space before an anonymous function's parens be added, \"function()\" vs \"function ()\"\n        \"space_after_anon_function\": false,\n\n        // Should the space before conditional statement be added, \"if(true)\" vs \"if (true)\"\n        \"space_before_conditional\": true,\n\n        // Add padding spaces within empty paren, \"f()\" vs \"f( )\"\n        \"space_in_empty_paren\": false,\n\n        // Add padding spaces within paren, ie. f( a, b )\n        \"space_in_paren\": false,\n\n        // Should printable characters in strings encoded in \\xNN notation be unescaped, \"example\" vs \"\\x65\\x78\\x61\\x6d\\x70\\x6c\\x65\"\n        \"unescape_strings\": false\n    },\n\n    \"json\":\n    {\n        // Rules added here apply only to JSON-like files, as determined by the\n        // rules specified for `global_file_rules` in the plugin settings. They\n        // take precedence over all of the settings in the 'all' category above.\n\n        // You can add other .jsbeautifyrc rules in this section too.\n\n        // [collapse|collapse-preserve-inline|expand|end-expand|none] Put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or put end braces on own line, or attempt to keep them where they are\n        \"brace_style\": \"expand\",\n\n        // Preserve array indentation\n        \"keep_array_indentation\": false,\n\n        // Should printable characters in strings encoded in \\xNN notation be unescaped, \"example\" vs \"\\x65\\x78\\x61\\x6d\\x70\\x6c\\x65\"\n        \"unescape_strings\": false\n    },\n\n    \"custom\":\n    {\n        // Rules added here apply only to files matching specific glob strings,\n        // but respecting any whitelists or blacklists as determined by the\n        // rules specified for `global_file_rules` in the plugin settings. They\n        // take precedence over any of the settings in the categories above.\n\n        // For the following entries, keys are globs and values are objects which\n        // can contain any kind of .jsbeautifyrc setting.\n\n        \"@(package?(-lock)|yarn-lock).json\":\n        {\n            \"indent_size\": 2,\n            \"brace_style\": \"collapse\"\n        },\n\n        \"*.sublime-@(settings|keymap|commands|menu)\":\n        {\n            \"indent_size\": 4,\n            \"brace_style\": \"expand\"\n        }\n    }\n}\n",
+			"settings":
+			{
+				"buffer_size": 6560,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"setjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"setjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"setv",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Bookmarks: Toggle"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 265.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/cil/oTwo-cil",
+		"/D/cil/oTwo-cil/oTwo-cil",
+		"/D/cil/oTwo-cil/oTwo-cil/build",
+		"/D/cil/oTwo-cil/oTwo-cil/config",
+		"/D/cil/oTwo-cil/oTwo-cil/src",
+		"/D/cil/oTwo-cil/oTwo-cil/src/assets",
+		"/D/cil/oTwo-cil/oTwo-cil/src/assets/css",
+		"/D/cil/oTwo-cil/oTwo-cil/src/assets/js",
+		"/D/cil/oTwo-cil/oTwo-cil/src/components",
+		"/D/cil/oTwo-cil/oTwo-cil/src/config",
+		"/D/cil/oTwo-cil/oTwo-cil/src/test",
+		"/D/cil/oTwo-cil/oTwo-cil/src/test/api",
+		"/D/cil/oTwo-cil/oTwo-cil/src/views"
+	],
+	"file_history":
+	[
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/User/.jsbeautifyrc",
+		"/D/cil/oTwo-cil/oTwo-cil/src/views/userSub.vue",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/User/JsFormat.sublime-settings",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/JsFormat/Default (Windows).sublime-keymap",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Packages/JsFormat/JsFormat.sublime-settings",
+		"/D/sublime_text_3200_merge_1107_win_x64/Data/Installed Packages/Vue Syntax Highlight.sublime-package",
+		"/D/sublime_text_3200_merge_1107_win_x64/sublime_merge/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Administrator/Desktop/新建文本文档  1.txt",
+		"/C/Users/Administrator/Desktop/新建文本文档.txt",
+		"/D/wwwroot/aso_wangtao/data/tmp/templates_c/Acl/0caa50466a2f2d7e02e4557e023f2fa734720b7f.file.detail.tpl.htm.php",
+		"/D/wwwroot/aso_wangtao/application/modules/Acl/models/Asotaskuser.php",
+		"/D/wwwroot/aso_wangtao/data/tmp/templates_c/Acl/7a8c2c81569bc7c295bfe8a26d5e6a32a5dbe10a.file.detail.tpl.htm.php",
+		"/D/wwwroot/aso_wangtao/application/modules/Acl/controllers/AsotaskController.php",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/components/HelloWorld.vue",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/App.vue",
+		"/D/shengyibao/trunk/vue/src/assets/css/base.css",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/components/HelloFromVux.vue",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/README.md",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/main.js",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/config/index.js",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/index.html",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/assets/css/base.css",
+		"/G/sublime_text_3200_merge_1107_win_x64/packagesConfig/.jshintrc",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/router/index.js",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/build/utils.js",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/src/assets/css/base.less",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/build/webpack.base.conf.js",
+		"/G/sublime_text_3200_merge_1107_win_x64/Data/Packages/User/SublimeREPL.sublime-settings",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/build/webpack.dev.conf.js",
+		"/D/otwo-cil/oTwo-cil/oTwo-cil/build/webpack.prod.conf.js",
+		"/D/git/gitdemo/t.php",
+		"/D/vux/demo/src/App.vue",
+		"/G/sublime_text_3200_merge_1107_win_x64/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/G/sublime_text_3200_merge_1107_win_x64/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/G/sublime_text_3200_merge_1107_win_x64_绿化版/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/G/sublime_text_3200_merge_1107_win_x64_绿化版/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/G/sublime_text_3200_merge_1107_win_x64_绿化版/Data/Packages/User/HTMLPrettify.sublime-settings",
+		"/G/sublime_text_3200_merge_1107_win_x64_绿化版/Data/Packages/User/.jsbeautifyrc",
+		"/D/git/gitdemo/t.js"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+			"D:\\wwwroot\\aso_wangtao,*.php",
+			"D:\\wwwroot\\aso_wangtao",
+			"D:\\otwo-cil\\oTwo-cil\\oTwo-cil\\"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"韩国",
+			"value=\"jp\"",
+			"jp",
+			"现有:用户",
+			"acl_aso_taskuser",
+			"AjaxPlugin",
+			"vux_logo",
+			"logo.png",
+			"normalize",
+			"alias",
+			"~",
+			"stylus-loader",
+			"Router",
+			"router",
+			"Router",
+			"\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/cil/oTwo-cil/oTwo-cil/src/components/EsFlex.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"SL.15.region_keys":
+							[
+							],
+							"syntax": "Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "base.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"SL.39.region_keys":
+							[
+							],
+							"syntax": "Packages/Vue Syntax Highlight/Vue Component.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"SL.40.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1634,
+								1634
+							]
+						],
+						"settings":
+						{
+							"SL.36.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.44692628803,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cil.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"vue",
+				"demo\\src\\App.vue"
+			],
+			[
+				"t",
+				"t.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\work\\南岗小程序.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
