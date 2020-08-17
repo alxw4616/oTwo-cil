@@ -3,8 +3,8 @@
 * 包含 vue 常用的 属性/方法
 */
 <template>
-	<div class="hello">
-		<h1>{{ msg }}</h1>
+	<div>
+		<h1 v-for="(item) in 70" ><font-awesome-icon icon="address-book" />{{ msg }}</h1>
 	</div>
 </template>
 <script>
@@ -53,11 +53,12 @@ export default {
 <style lang="less" scoped>
 @import '~@/assets/css/base.less';
 
-.hello {
+.view {
 	font-weight: normal;
 	color: @c;
 	.border-radius(4px);
 	font-size: 24px;
+	height: 100%;
 }
 
 </style>

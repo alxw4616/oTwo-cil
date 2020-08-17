@@ -10,6 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
     "element-ui": "^2.6.3",
     "esbase": "^1.0.0",
     "fastclick": "^1.0.6",
@@ -20,6 +23,7 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-px-to-viewport": "^1.1.0",
     "postcss-write-svg": "^3.0.1",
+    "reset-css": "^5.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^2.1.1",

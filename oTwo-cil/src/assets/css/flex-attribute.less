@@ -1,0 +1,67 @@
+// 通过属性设置flex
+// <div flex-row-lrc> ... </div>
+
+
+// 水平:中 垂直:中;
+div[flex-row-cc]{
+	display: flex;
+	// justify-content: flex-start | flex-end | center | space-between | space-around;
+	justify-content:center;
+
+	// align-items: flex-start | flex-end | center | baseline | stretch;
+	align-items:center;
+
+}
+
+// 水平:左 垂直:中;
+div[flex-row-lc]{
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+}
+
+// 水平:右 垂直:中;
+div[flex-row-rc]{
+	display: flex;
+	justify-content:flex-end;
+	align-items:center;
+}
+
+// 水平:左右 垂直:中;
+div[flex-row-lrc]{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+// 水平:中 垂直:上;
+div[flex-row-ct]{
+	display: flex;
+	// justify-content: flex-start | flex-end | center | space-between | space-around;
+	justify-content:center;
+
+	// align-items: flex-start | flex-end | center | baseline | stretch;
+	align-items:flex-start;
+
+}
+
+// 水平:左 垂直:上;
+div[flex-row-lt]{
+	display: flex;
+	justify-content:flex-start;
+	align-items:flex-start;
+}
+
+// 水平:右 垂直:上;
+div[flex-row-rt]{
+	display: flex;
+	justify-content:flex-end;
+	align-items:flex-start;
+}
+
+// 水平:左右 垂直:上;
+div[flex-row-lrt]{
+	display: flex;
+	justify-content:space-between;
+	align-items:flex-start;
+}
